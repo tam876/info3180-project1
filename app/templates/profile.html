@@ -6,7 +6,7 @@
 <br>
 <form action="{{url_for('profile')}}" method='POST' enctype = "multipart/form-data"> 
     {{ form.csrf_token }} 
-    <div class="pro">
+    <div class="proP">
      <div class="pform">
          {{ form.fname.label }} 
          {{ form.fname(class='form-control') }} 

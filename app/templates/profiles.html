@@ -6,18 +6,17 @@
 {% include "flash_messages.html"%}
 <br>
 {% for profile in profiles %}
-<div class="pro">
+<div class="prof">
     <div class="prob">
             <img id="uimg" src="{{url_for('static',filename='uploads/' + profile.ppicture)}}">
             <div class="icons">
                 <h4 class="name">{{profile.fname}} {{profile.lname}}</h4>
-                <p><img class="iconp"src="../static/picon.png"/>{{profile.gender}}</p>
-                <p><img class="iconp" src="../static/location.png"/>{{profile.location}}</p>
+                <p><img class="iconp"src="{{url_for('static', filename='picon.png')}}"/>{{profile.gender}}</p>
+                <p><img class="iconp" src="{{url_for('static', filename='location.png')}}"/>{{profile.location}}</p>
             </div>
             </div>
-        
                 <a class= "btn-v" href="{{url_for('profile')+'/{0}'.format(profile.id)}}">View Profile</a>
-                </div>
+        </div>
             <br>
             {%endfor %}
 {% endblock%}

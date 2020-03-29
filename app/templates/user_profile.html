@@ -9,9 +9,9 @@
             <div class="info">
                 <h4 class="name" >{{profile.fname}} {{profile.lname}}</h4>
                 <div class="icons">
-                <p ><img class="iconp" src="../static/email.png"/>{{profile.email}}</p>
-                <p><img class="iconp" src="../static/location.png"/> {{profile.location}}</p>
-                <p><img class="iconp" src="../static/date.png"/> Joined on {{profile.date_joined.strftime("%B %d,%Y")}}</p>
+                <p ><img class="iconp" src="{{url_for('static', filename='email.png')}}"/>{{profile.email}}</p>
+                <p><img class="iconp" src="{{url_for('static', filename='location.png')}}"/> {{profile.location}}</p>
+                <p><img class="iconp" src="{{url_for('static', filename='date.png')}}"/> Joined on {{profile.date_joined.strftime("%B %d,%Y")}}</p>
             </div>
             </div>
             </div>
